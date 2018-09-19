@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+
+  roles:
+    - { role: gano2018.ansible_os_init , tags: os_init }
+    - { role: gano2018.ansible_java    , tags: java }
+    - { role: gano2018.ansible_git     , tags: git }
+    - { role: gano2018.ansible_gitflow , tags: gitflow }
+
+    # - { role: nginx, tags: nginx}   ## nginx
+    # - { role: php, tags: php}       ## php / php-fpm
+    # - { role: mysql, tags: mysql}   ## MySQL
+    # - { role: phpmyadmin, tags: phpmyadmin }       ## php / php-fpm
+    # - { role: ssh, tags: ssh}   ## ssh 設定
+    # - { role: app, tags: app}   ## app 設定

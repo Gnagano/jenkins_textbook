@@ -1,0 +1,6 @@
+---
+- name: install gitflow
+  package:
+    name: git-flow
+    state: present
+    update_cache: yes

@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: gano
+  description: install git
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - 6
+    - name: ubuntu
+      versions:
+        - xenial #16.04
+    
+  galaxy_tags:
+    - centos
+    - yum
+
+dependencies: [ gano2018.ansible_os_init ]

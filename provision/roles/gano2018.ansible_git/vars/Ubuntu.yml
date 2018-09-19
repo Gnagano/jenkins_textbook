@@ -1,0 +1,4 @@
+---
+#ubuntu
+required_packages:
+  - git

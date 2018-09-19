@@ -1,0 +1,14 @@
+---
+#- name: add_repository
+#  apt_repository:
+#    repo: ppa:ondrej/php
+- name: basic package install
+  apt: name={{item}} state=present update_cache=yes
+  with_items:
+    - git
+    - vim
+    - language-pack-ja
+    #- nginx
+    # この上まででcommit
+    #- php5.6
+    #- php5.6-fpm

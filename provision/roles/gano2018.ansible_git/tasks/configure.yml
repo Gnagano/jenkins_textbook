@@ -1,0 +1,7 @@
+---
+# git config --global core.editor 'vim -c "set fenc=utf-8"'
+- name: Configure default editor to vim
+  git_config:
+    name: core.editor
+    scope: global
+    value: "vim -c 'set fenc=utf-8'"

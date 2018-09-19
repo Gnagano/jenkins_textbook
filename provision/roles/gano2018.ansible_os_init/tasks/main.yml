@@ -1,0 +1,6 @@
+---
+
+- include_tasks: centos6.yml
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version == "6"
