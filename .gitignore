@@ -8,3 +8,6 @@ playbook.retry
 
 # vagrant
 /.vagrant/*
+
+# app
+/app/*

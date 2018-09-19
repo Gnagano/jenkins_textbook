@@ -13,6 +13,12 @@ Vagrant.configure("2") do |config|
       vm.customize ["modifyvm", :id, "--memory", "512"]
     end
 
+    jenkins.vm.synced_folder "app", "/home/doc_root/game-of-life",
+      id: "vagrant-root1", :nfs => false,
+      :owner => "vagrant",
+      :group => "www-data",
+      :mount_options => ["dmode=775,fmode=775"]
+
     jenkins.vm.synced_folder "provision", "/home/vagrant/provision",
       id: "vagrant-root", :nfs => false,
       :owner => "vagrant",
