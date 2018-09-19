@@ -1,9 +1,0 @@
----
-common_basic_packages:
-  - vim
-  - language-pack-ja
-  - unzip
-
-common_python_packages:
-  - python-pip
-  - libmysqlclient-dev

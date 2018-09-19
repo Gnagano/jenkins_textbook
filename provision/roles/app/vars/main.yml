@@ -1,6 +1,0 @@
----
-app_dir:
-  "{{ document_root }}/crypto_payment_pf"
-
-app_repository_url:
-  "git@crypto_payment_pf:gano2018/crypto_payment_pf.git"

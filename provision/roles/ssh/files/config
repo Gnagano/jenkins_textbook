@@ -1,7 +1,0 @@
-Host crypto_payment_pf
-  User git
-  Port 22
-  HostName github.com
-  IdentityFile ~/.ssh/crypto_payment_pf
-  TCPKeepAlive yes
-  IdentitiesOnly yes
