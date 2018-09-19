@@ -1,0 +1,28 @@
+---
+php_repositories:
+  - ppa:ondrej/php
+
+php_packages:
+  - "php{{ php_version }}"
+  - "php{{ php_version }}-common"
+  - "php{{ php_version }}-fpm"
+  - "php{{ php_version }}-mbstring"
+  - "php{{ php_version }}-mysql"
+  - "php{{ php_version }}-enchant"
+  - "php{{ php_version }}-gd"
+  - "php{{ php_version }}-xml"
+  - "php{{ php_version }}-curl"
+  - "php{{ php_version }}-cli"
+  - "php{{ php_version }}-bcmath" #for library bitwasp
+  - "php{{ php_version }}-gmp"    #for library bitwasp/blockcypher
+  - "php{{ php_version }}-intl"
+  - "php{{ php_version }}-gettext"
+  - php-xdebug
+
+#conf file dest
+php_fpm_conf:
+  "/etc/php/{{ php_version }}/fpm/pool.d/www.conf"
+
+
+php_composer_path:
+  /usr/local/bin/composer

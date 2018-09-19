@@ -1,0 +1,12 @@
+---
+nginx_service_port: 80
+
+nginx_packages:
+  - nginx
+
+nginx_pip_packages:
+  - MySQL-python
+
+#conf file dest
+nginx_vhost_conf:
+  /etc/nginx/sites-enabled/default

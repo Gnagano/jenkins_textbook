@@ -1,0 +1,28 @@
+---
+- hosts: localhost
+  tasks:
+  - debug: msg="hello world"
+  # - name : basic package install
+  #   become: true
+    #apt: name={{item}} state=present update_cache=yes
+    # with_items:
+    #   - git
+    #   - vim
+    #   - language-pack-ja
+    #   - nginx
+
+  # - name : update ubuntu package
+  #   become: true
+  #   apt:
+  #     name: "*"
+  #     upgrade: yes
+  #     update_cache: yes
+  #     chache_valid_time: 86400 # 1 day
+  # - name : basic package install
+  #   become: true
+  #   apt: name={{item}} state=present update_cache=yes
+  #   with_items:
+  #     - git
+  #     - vim
+  #     - language-pack-ja
+  #     - nginx

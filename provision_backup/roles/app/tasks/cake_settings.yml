@@ -1,0 +1,27 @@
+---
+# composer update if app/vendor does not exists
+- name: cake / composer update
+  command: "composer update"
+  args:
+    chdir: "{{ app_dir }}"
+  when: app_vendor_dir.stat.exists == false
+
+# for test
+- name: caketest / install empty cakephp3 project
+  command: "composer create-project --prefer-dist cakephp/app cakeapp"
+  args:
+    chdir: "{{ document_root }}"
+  when: test_config_app.stat.exists == false
+
+- name: cakephp / craete app.php
+  copy:
+    src: app.php
+    dest: "{{ app_dir }}/config/"
+    owner: vagrant
+    group: vagrant
+    mode:  0644
+
+- name: cakephp / migrations
+  command: "bin/cake migrations migrate"
+  args:
+    chdir: "{{ app_dir }}"

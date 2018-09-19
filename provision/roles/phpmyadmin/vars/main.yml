@@ -1,0 +1,5 @@
+---
+phpmyadmin_packages:
+  - phpmyadmin
+
+phpmyadmin_link_name: phpmyadmin  

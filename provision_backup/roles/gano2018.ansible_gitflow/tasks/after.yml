@@ -1,0 +1,6 @@
+---
+- name: Remove gitflow installers
+  file:
+    state: absent
+    path: "{{ item }}"
+  with_items: "{{ gitflow.installers }}"

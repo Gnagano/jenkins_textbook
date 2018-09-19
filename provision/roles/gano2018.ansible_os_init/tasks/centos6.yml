@@ -1,0 +1,11 @@
+---
+- name: basic package install
+  yum:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ centos6.basic_packages }}"
+
+- name: Additional package auto registration
+  shell: "curl -s {{ centos6.additional_package_url }} | bash"
+  ignore_errors: yes

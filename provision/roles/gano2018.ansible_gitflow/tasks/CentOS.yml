@@ -1,0 +1,22 @@
+---
+
+- include_vars:
+    file: "{{ ansible_distribution }}.yml"
+    name: gitflow
+
+- name: Get git-flow installer
+  become: yes
+  get_url:
+    url: "{{ gitflow.repository_url }}"
+    dest: "/tmp"
+
+- name: Execute install.sh
+  shell: /bin/sh gitflow-installer.sh
+  args:
+    chdir: "/tmp"
+
+- name: Remove gitflow installers
+  file:
+    state: absent
+    path: "{{ item }}"
+  with_items: "{{ gitflow.installers }}"

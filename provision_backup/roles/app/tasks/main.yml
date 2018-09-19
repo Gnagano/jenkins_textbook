@@ -1,0 +1,16 @@
+---
+- name: app / set variable for directory and file
+  block:
+    - stat: path="{{ app_dir }}/vendor/"
+      register: app_vendor_dir
+
+    - stat: path="{{ document_root }}/cakeapp/config"
+      register: test_config_app
+
+#git clone the app files if not cloned yet.
+- block:
+  - include_tasks: roles/app/tasks/git_clone.yml
+  when: app_vendor_dir.stat.exists == false
+
+#app settings
+- include_tasks: roles/app/tasks/cake_settings.yml

@@ -1,0 +1,11 @@
+---
+- name: Get git-flow installer
+  become: yes
+  get_url:
+    url: "{{ gitflow.repository_url }}"
+    dest: "/tmp"
+
+- name: Execute install.sh
+  shell: /bin/sh gitflow-installer.sh
+  args:
+    chdir: "/tmp"
