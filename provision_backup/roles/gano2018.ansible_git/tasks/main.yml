@@ -1,3 +1,0 @@
----
-- include_tasks: install.yml   tags=git
-- include_tasks: configure.yml tags=git

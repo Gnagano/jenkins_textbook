@@ -1,7 +1,0 @@
----
-- name: basic package install
-  package:
-    name: "{{ item }}"
-    state: present
-    update_cache: yes
-  with_items: "{{ ubuntu16.basic_packages }}"

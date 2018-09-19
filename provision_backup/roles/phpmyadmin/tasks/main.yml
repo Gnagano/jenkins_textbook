@@ -1,4 +1,0 @@
----
-- include_tasks: roles/phpmyadmin/tasks/install.yml
-- include_tasks: roles/phpmyadmin/tasks/setup.yml
-- include_tasks: roles/phpmyadmin/tasks/configure.yml
