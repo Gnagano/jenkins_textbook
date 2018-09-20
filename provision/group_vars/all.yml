@@ -4,11 +4,9 @@
 user: vagrant
 web_server_user: www-data
 
-
 #directory
 home_dir: "/home/{{ user }}"
 document_root: /home/doc_root
 
-
-#php
-php_version: 5.6
+#app
+project_name: game-of-life

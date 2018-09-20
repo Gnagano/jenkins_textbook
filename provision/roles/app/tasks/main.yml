@@ -1,0 +1,7 @@
+---
+- name: set variable for directory and file
+  stat: path="{{ app.install_dir }}/.git/"
+  register: app_install_dir_git
+
+- include_tasks: git_clone.yml
+  when: app_install_dir_git.stat.exists == false

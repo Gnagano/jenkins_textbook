@@ -1,0 +1,5 @@
+---
+basic_packages:
+  - vim
+  - libselinux-python
+additional_package_url: https://setup.ius.io/

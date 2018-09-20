@@ -1,0 +1,7 @@
+---
+- name: basic package install
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ os_init.basic_packages }}"
