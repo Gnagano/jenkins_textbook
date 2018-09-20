@@ -1,3 +1,0 @@
-gano2018.ansible_gitflow
-gano2018.ansible_java
-gano2018.ansible_github_ssh
