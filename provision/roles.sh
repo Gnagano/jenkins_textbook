@@ -10,6 +10,7 @@ roles=(
 "ansible_gitflow"
 "ansible_java"
 "ansible_github_ssh"
+"ansible_jenkins"
 )
 
 for role in ${roles[@]}

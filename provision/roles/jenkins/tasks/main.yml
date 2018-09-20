@@ -1,3 +1,0 @@
----
-- include_tasks: roles/jenkins/tasks/prepare.yml
-- include_tasks: roles/jenkins/tasks/install.yml

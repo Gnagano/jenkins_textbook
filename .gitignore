@@ -10,7 +10,7 @@ playbook.retry
 /.vagrant/*
 
 # app
-/app/*
+/app
 
 # keys
 id_rsa

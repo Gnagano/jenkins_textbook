@@ -9,7 +9,7 @@
     # - { role: gano2018.ansible_gitflow , tags: gitflow }
     # - { role: gano2018.ansible_github_ssh , tags: github_ssh }
     # - { role: app , tags: app }
-    - { role: jenkins , tags: jenkins }
+    - { role: gano2018.ansible_jenkins , tags: jenkins }
 
 
     # - { role: nginx, tags: nginx}   ## nginx
