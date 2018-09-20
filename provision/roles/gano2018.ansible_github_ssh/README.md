@@ -1,4 +1,4 @@
-Setting to access github via SSH key
+Setting to access github by SSH key
 ===
 
 ## Overview

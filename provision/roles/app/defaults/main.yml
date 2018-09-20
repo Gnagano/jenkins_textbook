@@ -1,5 +1,5 @@
 ---
 
 app:
-  repository_url : git@github.com:gano2018/game-of-life.git
-  install_dir    : "{{ home_dir }}/{{ project_name }}"
+  repository_url : git@{{ project_name }}:gano2018/{{ project_name }}.git
+  install_dir    : "{{ document_root }}/{{ project_name }}"

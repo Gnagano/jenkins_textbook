@@ -1,6 +1,15 @@
 ---
+- set_fact:
+    os_type: "{{ ansible_distribution }}{{ ansible_distribution_major_version }}"
 
-- include_tasks: centos6.yml
+- include_vars:
+    file: "{{ os_type }}.yml"
+    name: os_init
+
+# common installation
+- include_tasks: "common.yml"
+
+# individual installtion for each OS
+- include_tasks: "{{ os_type }}.yml"
   when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "6"
+    os_type == "CentOS6"
