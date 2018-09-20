@@ -2,18 +2,17 @@
 
 #make current dir same as file dir
 SCRIPT_DIR=`dirname $0`
-user="gano2018"
 
 roles=(
-#"ansible_os_init" depended
-#"ansible_git"     dependedß
-"ansible_gitflow"
-"ansible_java"
-"ansible_github_ssh"
-"ansible_jenkins"
+#"gano2018.ansible_os_init" depended
+#"gano2018.ansible_git"     dependedß
+"gano2018.ansible_gitflow"
+"gano2018.ansible_github_ssh"
+"geerlingguy.jenkins"
+#"ansible_jenkins"
 )
 
 for role in ${roles[@]}
 do
-  ansible-galaxy install $user.$role --roles-path roles/
+  ansible-galaxy install $role --roles-path roles/
 done

@@ -4,13 +4,11 @@
 
   roles:
     # - { role: gano2018.ansible_os_init , tags: os_init }
-    # - { role: gano2018.ansible_java    , tags: java }
     # - { role: gano2018.ansible_git     , tags: git }
     # - { role: gano2018.ansible_gitflow , tags: gitflow }
     # - { role: gano2018.ansible_github_ssh , tags: github_ssh }
     # - { role: app , tags: app }
-    - { role: gano2018.ansible_jenkins , tags: jenkins }
-
+    - { role: geerlingguy.jenkins, tags: jenkins }
 
     # - { role: nginx, tags: nginx}   ## nginx
     # - { role: php, tags: php}       ## php / php-fpm
