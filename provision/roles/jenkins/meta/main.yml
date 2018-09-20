@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: gano
+  description: install jenkins
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial # 16.04
+  galaxy_tags:
+    - ubuntu
+    - java
+    - jenkins
+    - apt-get
+
+dependencies: [ gano2018.ansible_java ]

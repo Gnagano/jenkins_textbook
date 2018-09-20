@@ -1,0 +1,13 @@
+---
+jenkins_plugins:
+  - git
+  - checkstyle
+  - cloverphp
+  - dry
+  - htmlpublisher
+  - jdepend
+  - plot
+  - pmd
+  - vilations
+  - xunit
+  - phing

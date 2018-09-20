@@ -1,0 +1,15 @@
+---
+- name: wget repository
+  shell: "wget -q -O - http://pkg.jenkins.io/debian/jenkins-ci.org.key | apt-key add -"
+  args:
+    chdir: "/tmp"
+
+- name: deb jenkins
+  lineinfile:
+    path: "/etc/apt/sources.list.d/jenkins.list"
+    line: "deb http://pkg.jenkins.io/debian-stable binary/"
+    create: yes
+
+- name: package update
+  package:
+    update_cache: yes
