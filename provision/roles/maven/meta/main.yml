@@ -1,29 +1,16 @@
 ---
-dependencies:
-  - geerlingguy.java
-
 galaxy_info:
-  author: geerlingguy
-  description: Jenkins CI
-  company: "Midwestern Mac, LLC"
-  license: "license (BSD, MIT)"
-  min_ansible_version: 2.4
+  author: gano
+  description: Install maven
+  company: "SOA Development Ltd.,"
+  license: "license (MIT)"
+  min_ansible_version: 2.0
   platforms:
-  - name: EL
-    versions:
-    - 6
-    - 7
-  - name: Fedora
-    versions:
-    - all
-  - name: Debian
-    versions:
-    - all
   - name: Ubuntu
     versions:
-    - all
+    - xenial # 16.04
   galaxy_tags:
-    - development
-    - packaging
     - jenkins
-    - ci
+    - maven
+
+dependencies: []

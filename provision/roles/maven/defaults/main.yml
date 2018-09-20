@@ -1,5 +1,5 @@
 ---
-
-version: "{{ maven.version | 3.3.9 }}"
-major_version: "{{ regex_search('^\d+') }}"
-target_url: "http://www-eu.apache.org/dist/maven/maven-{{ major_version }}/{{ version }}/binaries/apache-maven-{{ version }}-bin.tar.gz"
+maven_version: "{{ maven_version_specified | default('3.3.9') }}"
+maven_major_version: "{{ maven_version | regex_search('^[0-9]+')}}"
+maven_target_url: "http://www-eu.apache.org/dist/maven/maven-{{ maven_major_version }}/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz"
+maven_install_dir: "/opt"
