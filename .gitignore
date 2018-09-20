@@ -11,3 +11,7 @@ playbook.retry
 
 # app
 /app/*
+
+# keys
+id_rsa
+id_rsa.pub

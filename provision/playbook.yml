@@ -3,10 +3,12 @@
   become: true
 
   roles:
-    - { role: gano2018.ansible_os_init , tags: os_init }
-    - { role: gano2018.ansible_java    , tags: java }
-    - { role: gano2018.ansible_git     , tags: git }
-    - { role: gano2018.ansible_gitflow , tags: gitflow }
+    # - { role: gano2018.ansible_os_init , tags: os_init }
+    # - { role: gano2018.ansible_java    , tags: java }
+    # - { role: gano2018.ansible_git     , tags: git }
+    # - { role: gano2018.ansible_gitflow , tags: gitflow }
+    - { role: github_ssh , tags: github_ssh }
+    #- { role: app , tags: app }
 
     # - { role: nginx, tags: nginx}   ## nginx
     # - { role: php, tags: php}       ## php / php-fpm

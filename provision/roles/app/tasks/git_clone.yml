@@ -1,0 +1,10 @@
+---
+- name: Git pull the repository
+  become_user: "{{ user | default('root') }}"
+  git:
+    repo: "{{ app.repository_url }}"
+    accept_hostkey: yes
+    dest: "{{ app.install_dir }}"
+    refspec: '+refs/heads/*:refs/remotes/origin/*'
+    update: yes
+  #when: app_vendor_dir.stat.exists == false

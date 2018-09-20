@@ -1,0 +1,5 @@
+---
+
+app:
+  repository_url : git@github.com:gano2018/game-of-life.git
+  install_dir    : "{{ home_dir }}/{{ project_name }}"
