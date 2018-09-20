@@ -8,7 +8,8 @@
     # - { role: gano2018.ansible_gitflow , tags: gitflow }
     # - { role: gano2018.ansible_github_ssh , tags: github_ssh }
     # - { role: app , tags: app }
-    - { role: geerlingguy.jenkins, tags: jenkins }
+    #- { role: geerlingguy.jenkins, tags: jenkins }
+    - { role: maven, tags: maven }
 
     # - { role: nginx, tags: nginx}   ## nginx
     # - { role: php, tags: php}       ## php / php-fpm
