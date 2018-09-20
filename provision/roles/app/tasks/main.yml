@@ -1,5 +1,7 @@
 ---
-#git clone the app files if not cloned yet.
-- block:
-  - include_tasks: git_clone.yml
-#  when: app_vendor_dir.stat.exists == false
+- name: set variable for directory and file
+  stat: path="{{ app.install_dir }}/.git/"
+  register: app_install_dir_git
+
+- include_tasks: git_clone.yml
+  when: app_install_dir_git.stat.exists == false

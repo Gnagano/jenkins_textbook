@@ -1,5 +1,4 @@
 ---
-
 app:
   repository_url : git@{{ project_name }}:gano2018/{{ project_name }}.git
   install_dir    : "{{ document_root }}/{{ project_name }}"

@@ -1,5 +1,5 @@
 ---
-- name: Git pull the repository
+- name: git pull the repository
   become_user: "{{ user | default('root') }}"
   git:
     repo: "{{ app.repository_url }}"
@@ -7,4 +7,3 @@
     dest: "{{ app.install_dir }}"
     refspec: '+refs/heads/*:refs/remotes/origin/*'
     update: yes
-  #when: app_vendor_dir.stat.exists == false
