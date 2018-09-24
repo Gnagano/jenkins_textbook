@@ -1,0 +1,16 @@
+# ---
+# galaxy_info:
+#   author: gano
+#   description: Install maven
+#   company: "SOA Development Ltd.,"
+#   license: "license (MIT)"
+#   min_ansible_version: 2.0
+#   platforms:
+#   - name: Ubuntu
+#     versions:
+#     - xenial # 16.04
+#   galaxy_tags:
+#     - jenkins
+#     - maven
+#
+# dependencies: []

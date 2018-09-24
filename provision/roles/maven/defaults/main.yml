@@ -1,5 +1,0 @@
----
-
-version: "{{ maven.version | 3.3.9 }}"
-major_version: "{{ regex_search('^\d+') }}"
-target_url: "http://www-eu.apache.org/dist/maven/maven-{{ major_version }}/{{ version }}/binaries/apache-maven-{{ version }}-bin.tar.gz"

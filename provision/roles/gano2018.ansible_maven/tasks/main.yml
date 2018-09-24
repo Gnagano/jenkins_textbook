@@ -1,0 +1,41 @@
+---
+- name: wget tar ball
+  get_url:
+    url: "{{ maven_target_url }}"
+    dest: "/opt"
+
+- name: extract tar ball
+  unarchive:
+    src: "{{ maven_install_dir}}/apache-maven-{{ maven_version }}-bin.tar.gz"
+    dest: "{{ maven_install_dir }}"
+
+- name: set variable for directory and file
+  stat: path="{{ maven_install_dir }}/maven"
+  register: maven_dir
+
+- name: reomove the extracted director if maven already exists
+  file:
+    path: "{{ maven_install_dir }}/apache-maven-{{ maven_version }}"
+    state: absent
+  when: maven_dir.stat.exists == true
+
+- name: rename the extracted directory
+  shell: "mv {{ maven_install_dir }}/apache-maven-{{ maven_version }} {{ maven_install_dir }}/maven"
+  when: maven_dir.stat.exists == false
+
+- name: delete old directory
+  file:
+    path: "{{ maven_install_dir }}/apache-maven-{{ maven_version }}-bin.tar.gz"
+    state: absent
+
+- name: add profile
+  template:
+    src: mavenenv.sh.j2
+    dest: /etc/profile.d/mavenenv.sh
+    owner: root
+    group: root
+    mode:  0755
+
+- name: force init.
+  shell: /etc/profile.d/mavenenv.sh
+  changed_when: false
