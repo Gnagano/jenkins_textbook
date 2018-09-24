@@ -1,0 +1,8 @@
+---
+- name: copy maven setting file
+  template:
+    src: hudson.tasks.Maven.xml.j2
+    dest: "{{ jenkins_root }}/hudson.tasks.Maven.xml"
+    owner: jenkins
+    group: jenkins
+    mode:  '0644'

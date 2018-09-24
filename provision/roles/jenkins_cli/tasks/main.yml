@@ -1,0 +1,6 @@
+---
+- include_tasks: prepare.yml
+- include_tasks: maven_settings.yml
+- include_tasks: create_job.yml
+
+#- include_tasks: manage_jenkins_credentials.yml

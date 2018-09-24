@@ -1,0 +1,21 @@
+---
+jenkins_cli_python_required_package:
+  - lxml           # lxml should be prior to python-jenkins
+  - python-jenkins
+
+jenkins_cli_job_name: game-of-life-default
+jenkins_cli_username: admin
+jenkins_cli_password: admin
+jenkins_cli_server_url: http://localhost:8080
+
+
+jenkins_root: "/var/lib/jenkins"
+
+jenkins_cli_repository: git@github.com:gano2018/game-of-life.git
+jenkins_cli_repository_branch: master
+
+jenkins_cli_job_schedule: "* * * * *"
+jenkins_cli_maven_goal: "clean package"
+
+jenkins_cli_output_test_result: "**/target/surefire-reports/*.xml"
+jenkins_cli_output_files: "**/target/*.jar"

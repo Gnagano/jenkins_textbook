@@ -1,0 +1,11 @@
+---
+- name: install python-pip
+  package:
+    name: "python-pip"
+    state: present
+    update_cache: yes
+
+- name: pip install python-jeinkins
+  pip:
+    name: "{{ item }}"
+  with_items: "{{ jenkins_cli_python_required_package }}"
