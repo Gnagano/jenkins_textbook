@@ -1,0 +1,21 @@
+2.7 さらなるレポート -- Javadocの表示
+
+# ビルドの設定
+  ## ビルド手順の追加1
+    ### Mavenの呼び出し
+      #### ゴール
+       > install
+
+  ## ビルド手順の追加2
+    ### Mavenの呼び出し
+      #### ゴール
+       > javadoc:javadoc
+
+  ## ビルド後の処理
+    ### Javadocの保存
+      #### Javadocディレクトリ
+        > gameoflife-core/target/site/apidocs
+        > ✓ 成功したビルドごとにJavadocを保存
+
+# ビルド実行前に
+sudo gpasswd -a jenkins www-data
